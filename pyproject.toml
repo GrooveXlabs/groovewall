@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "groovewall"
+version = "0.1.0"
+description = "Zero-Trust Runtime Proxy & Security Firewall for Model Context Protocol (MCP) servers."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "GrooveXlabs", email = "security@groovexlabs.com" },
+]
+keywords = [
+    "security", "mcp", "firewall", "proxy", "zero-trust",
+    "agentic-ai", "command-injection", "ssrf", "audit-ledger", "grooveguard"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Topic :: Security",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "click>=8.1.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.1.0",
+    "mypy>=1.8.0",
+]
+
+[project.scripts]
+groovewall = "groovewall.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/GrooveXlabs/groovewall"
+Repository = "https://github.com/GrooveXlabs/groovewall"
+Issues = "https://github.com/GrooveXlabs/groovewall/issues"
